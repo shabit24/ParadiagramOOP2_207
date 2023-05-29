@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class ornag {
+class orang {
 public:
 	string nama;
 
@@ -19,5 +19,37 @@ public:
 class manusia {
 public:
 	string jenisKelamin;
+	manusia(string pJenisKelamin) :
+		jenisKelamin(pJenisKelamin) {
+		cout << "manusia dibuat\n" << endl;
+
+	}
+	~manusia() {
+		cout << "manusia dihapus" << endl;
+	}
 
 };
+
+class pelajar : private manusia, public orang {
+public:
+	string sekolah;
+	pelajar(string pNama, string pJenisKelamin, string pSekilah) :
+		orang(pNama),
+		manusia(pJenisKelamin),
+		sekolah(pSekolah) {
+		cout << "pelajer dibuat\n" << endl;
+
+	}
+	~pelajar() {
+		cout << "pelajar dihapus" << endl;
+	}
+	string perkenalan() {
+		return "Hallo, nama saya " + nama + "dengan jenis kelamin" + jenisKelamin;
+	}
+};
+
+int main() {
+	pelajar andi("andi laksono", "Laki-Laki", "belajarcpp");
+	cout << andi.perkenalan();
+}
+
