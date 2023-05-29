@@ -13,4 +13,20 @@ public:
 		return saklarNo[i];
 	}
 };
+int main() {
+	remoteLampu lampuRumah;
+	lampuRumah.setSaklarNo(0, "Lampu teras rumah");
+	lampuRumah.setSaklarNo(1, "Lampu ruang tamu");
+	lampuRumah.setSaklarNo(2, "Lampu kamar tidur");
+	lampuRumah.setSaklarNo(3, "Lampu dapur");
+	
+
+	cout << lampuRumah.getSaklarNo(0) << endl;
+	cout << lampuRumah.getSaklarNo(1) << endl;
+	cout << lampuRumah.getSaklarNo(2) << endl;
+	cout << lampuRumah.getSaklarNo(3) << endl;
+
+	return 0;
+
+}
 
