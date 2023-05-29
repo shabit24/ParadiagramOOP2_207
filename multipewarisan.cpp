@@ -33,7 +33,7 @@ public:
 class pelajar : private manusia, public orang {
 public:
 	string sekolah;
-	pelajar(string pNama, string pJenisKelamin, string pSekilah) :
+	pelajar(string pNama, string pJenisKelamin, string pSekolah) :
 		orang(pNama),
 		manusia(pJenisKelamin),
 		sekolah(pSekolah) {
@@ -44,12 +44,13 @@ public:
 		cout << "pelajar dihapus" << endl;
 	}
 	string perkenalan() {
-		return "Hallo, nama saya " + nama + "dengan jenis kelamin" + jenisKelamin;
+		return "Hallo, nama saya " + nama + "dengan jenis kelamin" + jenisKelamin + "dari sekolah "+ sekolah+"\n\n";
 	}
 };
 
 int main() {
 	pelajar andi("andi laksono", "Laki-Laki", "belajarcpp");
 	cout << andi.perkenalan();
+	return 0;
 }
 
